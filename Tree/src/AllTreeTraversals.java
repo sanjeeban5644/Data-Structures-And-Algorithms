@@ -15,10 +15,6 @@ class TreeNode{
 class BinaryTree{
     Scanner in = new Scanner(System.in);
     TreeNode root;
-
-
-
-
     TreeNode insert_m(){
         System.out.println("Enter the Node value: ");
         int data = in.nextInt();
@@ -34,7 +30,12 @@ class BinaryTree{
 
 }
 
+
 public class AllTreeTraversals {
+
+
+
+
     public static void main(String[] args) {
 
         BinaryTree tree = new BinaryTree();
