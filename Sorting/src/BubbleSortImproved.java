@@ -9,7 +9,7 @@ public class BubbleSortImproved {
     static int[] bubbleSort(int[] arr){
         int flag = 0;
         int n = arr.length;
-        for(int i = 0;i<n;i++){
+        for(int i = 0;i<n-1;i++){
             flag=0;
             for(int j = 1;j<n-i;j++){
                 if(arr[j]<arr[j-1]){

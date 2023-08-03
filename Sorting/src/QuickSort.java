@@ -13,7 +13,7 @@ public class QuickSort {
         int start = lb;
         int end = ub;
         int mid = lb + (ub-lb)/2;
-        int pivot = arr[ub];
+        int pivot = arr[mid];
 
         while(start<=end){
             while(arr[start]<pivot){
@@ -31,7 +31,6 @@ public class QuickSort {
                 end--;
             }
         }
-
         quicksort(arr,lb,end);
         quicksort(arr,start,ub);
 

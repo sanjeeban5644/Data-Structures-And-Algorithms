@@ -106,13 +106,31 @@ public class BinarySearchTree {
         list.remove(list.size()-1);
     }
 
+    static int countNodes(Node root){
+        if(root==null) return 0;
+        int a =  countNodes(root.left);
+        int b = countNodes(root.right);
+        return a+b+1;
+    }
+
+
+
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         root = tree.insert(root,5);
-        boolean isPresent = tree.search(root,60);
+        root = tree.insert(root,1);
+        root = tree.insert(root,7);
+        root = tree.insert(root,3);
+        root = tree.insert(root,2);
+        root = tree.insert(root,6);
+        root = tree.insert(root,9);
+        root = tree.insert(root,8);
+        boolean isPresent = tree.search(root,6);
         tree.display(root);
         root=tree.delete(root,3);
-        tree.display(root);
-        tree.printRoot_Leaf(root,new ArrayList<>());
+        //tree.display(root);
+        //tree.printRoot_Leaf(root,new ArrayList<>());
+        System.out.println("Total Nodes are: "+countNodes(root));
     }
 }
