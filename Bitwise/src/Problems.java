@@ -5,6 +5,13 @@ public class Problems {
         System.out.println("ith bit is: "+ithbit(n,4));
         System.out.println("After setting ith bit: "+setith(n,3));
         System.out.println("The 6th magic no. is: "+nthmagic(5));
+        System.out.println("Is number power of 2?: "+checkPower(30));
+    }
+
+    static boolean checkPower(int num){
+        int temp = num-1;
+        if((num&temp)==0) return true;
+        return false;
     }
 
     public static int nthmagic(int num){
